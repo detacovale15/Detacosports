@@ -1,0 +1,148 @@
+@use "./sass/colors" as *;
+@use "./sass/variables" as *;
+@use "./sass/mixins" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  box-sizing: border-box;
+  color: $colorTexto;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: $colorPrincipal;
+  overflow-y: auto;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  @include flex-between;
+  padding: 10px 40px;
+  background: $colorPrincipal;
+  border-bottom: 1px solid rgba($colorTexto, 0.1);
+  .navbar-button {
+    display: flex;
+    justify-content: flex-end;
+    .btn {
+      @include button;
+    }
+  }
+}
+
+.logo {
+  height: 80px;
+}
+
+.footer {
+  @include flex-column;
+  background: $colorPrincipal;
+  color: $colorTexto;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid rgba($colorTexto, 0.1);
+  .footer-links {
+    @include flex-between;
+    width: 80%;
+    gap: 80px;
+    margin-bottom: 25px;
+    a {
+      color: $colorTexto;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.hero-section {
+  @include home-section;
+  .hero-overlay {
+    @include section-overlay;
+    @include flex-center;
+    .hero-content {
+      position: relative;
+      top: 10px;
+      left: 50px;
+      width: 90%;
+      .hero-title {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        text-align: left;
+      }
+      .hero-description {
+        font-size: 2rem;
+        margin-bottom: 50px;
+        text-align: left;
+      }
+      .btn {
+        @include button;
+        width: 200px;
+      }
+    }
+  }
+}
+
+.featured-section {
+  @include home-section;
+  h2 {
+    @include h2;
+    margin: 20px auto;
+  }
+  .detaco-overlay {
+    @include section-overlay;
+    .detaco-content {
+      @include flex-column;
+      padding: 30px;
+      max-width: 1200px;
+      margin: 50px auto;
+      gap: 30px;
+      text-align: left;
+      .detaco-title {
+        @include h2;
+        font-size: 3rem;
+      }
+      p {
+        margin-top: 30px;
+        font-size: 1.6rem;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.products-section {
+  @include home-section;
+  h2 {
+    @include h2;
+    margin: 20px auto;
+  }
+  .store-overlay {
+    @include section-overlay;
+    .store-content {
+      margin: 80px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .store-title {
+        font-size: 3rem;
+      }
+      .store-description {
+        font-size: 2rem;
+        margin: 0;
+      }
+    }
+  }
+}

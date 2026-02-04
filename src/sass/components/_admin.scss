@@ -1,0 +1,53 @@
+@use "../colors" as *;
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.admin-dashboard {
+  @include flex-column;
+  margin-top: 140px;
+
+  gap: 30px;
+  .line {
+    @include flex-between;
+    margin-bottom: 10px;
+    gap: 40px;
+    .btn {
+      @include button;
+      width: 300px;
+    }
+    .input-field {
+      border: 1px solid $colorTexto;
+    }
+  }
+}
+
+.admin-products {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  h2 {
+    @include h2;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .btn {
+    @include button;
+    display: block;
+    margin: 30px auto 0 auto;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}

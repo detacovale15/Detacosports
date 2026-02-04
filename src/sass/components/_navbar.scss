@@ -1,0 +1,26 @@
+@use "../colors" as *;
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  @include flex-between;
+  padding: 10px 40px;
+  background: $colorPrincipal;
+  border-bottom: 1px solid rgba($colorTexto, 0.1);
+  .navbar-button {
+    display: flex;
+    justify-content: flex-end;
+    .btn {
+      @include button;
+    }
+  }
+}
+
+.logo {
+  height: 80px;
+}

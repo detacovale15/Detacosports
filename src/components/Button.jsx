@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const Button = ({
+  icono,
   texto,
   to,
   onClick,
@@ -20,6 +21,7 @@ const Button = ({
   if (to) {
     return (
       <Link to={to} className={className}>
+        {icono && <span>{icono}</span>}
         <span>{texto}</span>
       </Link>
     );
@@ -32,12 +34,14 @@ const Button = ({
       className={className}
       disabled={disabled}
     >
+      {icono && <span>{icono}</span>}
       <span>{texto}</span>
     </button>
   );
 };
 
 Button.propTypes = {
+  icono: PropTypes.node,
   texto: PropTypes.string.isRequired,
   to: PropTypes.string,
   onClick: PropTypes.func,

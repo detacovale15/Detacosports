@@ -20,6 +20,12 @@
   align-items: center;
 }
 
+@mixin flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 @mixin flex-column {
   display: flex;
   flex-direction: column;
@@ -74,7 +80,7 @@
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 110px);
   min-height: 600px;
 }
 
@@ -85,4 +91,38 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+}
+
+@mixin modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  overflow-y: auto;
+  padding: 2rem 1rem;
+  @include flex-center;
+  align-items: flex-start;
+}
+
+@mixin modal-content {
+  background: #e5e5e5;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  animation: modalFade 0.25s ease;
+}
+
+@mixin card-style(
+  $bg: white,
+  $shadow: 0 4px 12px rgba(0, 0, 0, 0.1),
+  $radius: 12px,
+  $padding: 16px
+) {
+  background: $bg;
+  box-shadow: $shadow;
+  border-radius: $radius;
+  padding: $padding;
 }

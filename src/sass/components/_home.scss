@@ -1,0 +1,73 @@
+@use "../colors" as *;
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.hero-section {
+  @include home-section;
+  .hero-overlay {
+    @include section-overlay;
+    @include flex-center;
+    .hero-content {
+      position: relative;
+      top: 10px;
+      left: 50px;
+      width: 90%;
+      .hero-title {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        text-align: left;
+      }
+      .hero-description {
+        font-size: 2rem;
+        margin-bottom: 50px;
+        text-align: left;
+      }
+      .btn {
+        @include button;
+        width: 200px;
+      }
+    }
+  }
+}
+
+.featured-section {
+  @include home-section;
+  h2 {
+    @include h2;
+    margin: 20px auto;
+  }
+  .detaco-overlay {
+    @include section-overlay;
+    .detaco-content {
+      @include flex-column;
+      padding: 30px;
+      max-width: 1200px;
+      margin: 50px auto;
+      gap: 30px;
+      text-align: left;
+      .detaco-title {
+        @include h2;
+        font-size: 3rem;
+      }
+      p {
+        margin-top: 30px;
+        font-size: 1.6rem;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.products-section {
+  @include home-section;
+  h2 {
+    @include h2;
+    margin: 30px auto;
+  }
+  .flex-card {
+    @include flex-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

@@ -80,8 +80,7 @@
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: calc(100vh - 110px);
-  min-height: 600px;
+  min-height: calc(100vh - 110px);
 }
 
 @mixin section-overlay {

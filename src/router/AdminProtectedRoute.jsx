@@ -1,7 +1,7 @@
 import { Navigate, Outlet } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
-import Loading from "../components/Loading";
+import Loading from "../components/common/Loading";
 
 const AdminProtectedRoute = () => {
   const { user, loading } = useContext(AuthContext);

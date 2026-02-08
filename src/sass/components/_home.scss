@@ -59,7 +59,9 @@
 }
 
 .products-section {
-  @include home-section;
+  width: 100%;
+  min-height: calc(100vh - 110px);
+  padding-bottom: 80px;
   h2 {
     @include h2;
     margin: 30px auto;
@@ -68,6 +70,7 @@
     @include flex-around;
     flex-wrap: wrap;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 60px;
+    gap: 30px;
   }
 }

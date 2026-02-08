@@ -5,10 +5,10 @@ import {
   eliminarProducto,
   actualizarProducto,
 } from "../services/productService";
-import AdminProducts from "../components/AdminProducts";
-import Button from "../components/Button";
-import Input from "../components/Input";
-import ModalProducts from "../components/ModalProducts";
+import AdminProducts from "../components/products/AdminProducts";
+import Button from "../components/common/Button";
+import Input from "../components/common/Input";
+import ModalProducts from "../components/common/ModalProducts";
 
 const AdminDashboard = () => {
   const [allProducts, setAllProducts] = useState([]);

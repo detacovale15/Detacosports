@@ -1,5 +1,5 @@
-import banner from "../../public/banner.png";
-import Button from "./Button";
+import banner from "../../../public/banner.png";
+import Button from "../common/Button";
 
 const HeroSection = () => {
   return (

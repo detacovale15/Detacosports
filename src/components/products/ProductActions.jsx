@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import Button from "./Button";
+import Button from "../common/Button";
 
 const ProductActions = ({ product, onEliminar, onEditar }) => {
   return (

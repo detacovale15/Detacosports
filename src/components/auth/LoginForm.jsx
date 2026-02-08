@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { AuthContext } from "../context/AuthContext";
-import Button from "./Button";
+import { AuthContext } from "../../context/AuthContext";
+import Button from "../common/Button";
 import Swal from "sweetalert2";
-import Input from "./Input";
+import Input from "../common/Input";
 
 const LoginForm = () => {
   const { login } = useContext(AuthContext);

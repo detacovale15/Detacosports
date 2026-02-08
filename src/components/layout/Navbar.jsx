@@ -1,5 +1,5 @@
-import Logo from "../assets/Logo.jsx";
-import Button from "./Button.jsx";
+import Logo from "../../assets/Logo.jsx";
+import Button from "../common/Button.jsx";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {

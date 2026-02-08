@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
-import ModalCompra from "../components/ModalCompra";
+import ModalCompra from "../components/common/ModalCompra";
 
 const Cart = () => {
   const { cart, clearCart } = useContext(CartContext);

@@ -5,7 +5,7 @@ import AdminLayout from "./layouts/AdminLayout";
 import AdminProtectedRoute from "./router/AdminProtectedRoute";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
-import AdminRoute from "./components/AdminRoute";
+import AdminRoute from "./components/routes/AdminRoute";
 import AdminDashboard from "./pages/AdminDashboard";
 
 function App() {

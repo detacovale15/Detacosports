@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import Button from "./Button";
 import { Icon } from "@iconify/react";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../../context/CartContext";
 
 const Card = ({ producto }) => {
   const [cantidad, setCantidad] = useState(1);

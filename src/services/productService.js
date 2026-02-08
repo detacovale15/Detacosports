@@ -6,6 +6,11 @@ import {
   updateDoc,
   deleteDoc,
   addDoc,
+  query,
+  orderBy,
+  startAt,
+  endAt,
+  where,
 } from "firebase/firestore";
 
 const productsRef = collection(db, "products");
@@ -27,4 +32,28 @@ export const eliminarProducto = async (id) => {
 
 export const crearProducto = async (data) => {
   await addDoc(productsRef, data);
+};
+
+export const searchProducts = async (searchText) => {
+  if (!searchText) return [];
+
+  const productsRef = collection(db, "products");
+
+  // Consulta por prefijo usando startAt y endAt
+  const q = query(
+    productsRef,
+    orderBy("name"),
+    startAt(searchText),
+    endAt(searchText + "\uf8ff"),
+  );
+
+  const snapshot = await getDocs(q);
+  return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+};
+
+export const obtenerDestacados = async () => {
+  const productsRef = collection(db, "products");
+  const q = query(productsRef, where("destacado", "==", true));
+  const snapshot = await getDocs(q);
+  return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 };

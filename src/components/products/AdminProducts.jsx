@@ -1,4 +1,4 @@
-import Loading from "./Loading";
+import Loading from "../common/Loading";
 import ProductsTable from "./ProductsTable";
 
 const AdminProducts = ({ products, loading, onEliminar, onEditar }) => {
